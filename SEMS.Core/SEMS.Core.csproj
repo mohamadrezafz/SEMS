@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DataAccessInterfaces\" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="KernelFramework" Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+			<HintPath>..\..\..\KernelFramework\bin\Debug\net6.0\KernelFramework.dll</HintPath>
+		</Reference>
+
+		<Reference Include="KernelFramework" Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+			<HintPath>..\..\..\KernelFramework\bin\Release\net6.0\KernelFramework.dll</HintPath>
+		</Reference>
+	</ItemGroup>
+
+</Project>
